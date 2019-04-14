@@ -14,6 +14,9 @@ import { NestedFormComponent } from './forms/nested-form/nested-form.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ZipValidatorDirective } from './zip-validator.directive';
+
 
 const routes: Routes = [
   {path: '', redirectTo: 'template', pathMatch: 'full'},
@@ -30,12 +33,15 @@ const routes: Routes = [
     TemplateSampleComponent,
     ReactiveSampleComponent,
     NestedFormComponent,
-    FooterComponent
+    FooterComponent,
+    ZipValidatorDirective
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    HighlightModule.forRoot({ theme: 'arduino-light'})
+    HighlightModule.forRoot({ theme: 'arduino-light'}),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
