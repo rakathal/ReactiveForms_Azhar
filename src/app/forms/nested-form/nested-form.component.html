@@ -1,0 +1,134 @@
+<div style="padding-right:15px;" class="container-fluid">
+
+  <!-- form header -->
+  <div class="row">
+    <div class="col">
+      <h1>Nested Forms</h1>
+      <hr>
+    </div>
+  </div>
+
+  <!-- main form -->
+  <div class="row">
+    <form action="" style="width:100%;">
+      <div class="col">
+
+        <!-- personal info -->
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="fnText">First Name</label>
+              <input type="text" class="form-control" id="fnText" placeholder="Enter first name">
+              <small id="fnHelp" class="form-text custom-invalid-feedback">Field is required</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="lnText">Last Name</label>
+              <input type="text" class="form-control" id="lnText" placeholder="Enter last name">
+              <small id="fnHelp" class="form-text custom-invalid-feedback">Field is required</small>
+            </div>
+          </div>
+          <div class="col-12">
+            <div>
+              <label for="" class="form-label">Favourite Food</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Mango</label>
+            </div>
+            <div>
+              <small id="fnHelp" class="form-text custom-invalid-feedback">Atleast choose one</small>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- seperator -->
+        <div class="row">
+          <div class="col">
+            <hr>
+          </div>
+        </div>
+
+
+        <!-- address form portion -->
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-8">
+                    <h4>Address 1</h4>
+                  </div>
+                  <div class="col-4 control-buttons">
+                    <img src="/assets/icons/add.svg" alt="">
+                    <img src="/assets/icons/remove.svg" alt="" width="24" height="24">
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <div class="col-12" style="margin-bottom: 1rem;">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Is Primary Address
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="addText">Street Address</label>
+                  <input type="text" class="form-control" id="addText" placeholder="Enter street address">
+                  <small class="form-text custom-invalid-feedback">Field is required</small>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="city">City</label>
+                      <input type="text" class="form-control" id="city" placeholder="Enter city">
+                      <small class="form-text custom-invalid-feedback">Field is required</small>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="state">State</label>
+                      <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option *ngFor="let item of states" [value]="item">{{item}}</option>
+                      </select>
+                      <small class="form-text custom-invalid-feedback">Field is required</small>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="zipcode">Zip Code</label>
+                      <input type="text" class="form-control" id="zipcode" placeholder="Enter city">
+                      <small class="form-text custom-invalid-feedback">Field is required</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- seperator -->
+        <div class="row">
+          <div class="col">
+            <hr>
+          </div>
+        </div>
+
+        <!-- final action buttons -->
+        <div class="row justify-content-center">
+          <div class="col-2">
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
